@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package auth;
+
+option go_package = "ewmw.shortener.v1;shortenerv1";
+
+service Shortener {
+  rpc Shorten (UrlShortenRequest) returns (UrlShortenResponse);
+}
+
+message UrlShortenResponse {
+  string url = 1;
+}
+
+message UrlShortenRequest {
+  string url = 1;
+}
