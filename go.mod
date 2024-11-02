@@ -1,3 +1,3 @@
 module github.com/pmentoring/shortener-protoc
 
-go 1.21
+go 1.22
