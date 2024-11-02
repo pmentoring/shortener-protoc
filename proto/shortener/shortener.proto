@@ -6,6 +6,7 @@ option go_package = "ewmw.shortener.v1;shortenerv1";
 
 service Shortener {
   rpc Shorten (UrlShortenRequest) returns (UrlShortenResponse);
+  rpc Unshorten (UrlUnshortenRequest) returns (UrlUnshortenResponse);
 }
 
 message UrlShortenResponse {
@@ -15,4 +16,12 @@ message UrlShortenResponse {
 message UrlShortenRequest {
   string title = 1;
   string url = 2;
+}
+
+message UrlUnshortenRequest {
+  string url = 1;
+}
+
+message UrlUnshortenResponse {
+  string url = 1;
 }
