@@ -13,5 +13,6 @@ message UrlShortenResponse {
 }
 
 message UrlShortenRequest {
-  string url = 1;
+  string title = 1;
+  string url = 2;
 }
