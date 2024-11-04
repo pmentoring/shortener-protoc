@@ -11,6 +11,7 @@ service Shortener {
 
 message UrlShortenResponse {
   string url = 1;
+  uint64 userId = 2;
 }
 
 message UrlShortenRequest {
@@ -20,8 +21,14 @@ message UrlShortenRequest {
 
 message UrlUnshortenRequest {
   string url = 1;
+  map <string, StringArray> headers = 2;
+  string ip = 3;
 }
 
 message UrlUnshortenResponse {
   string url = 1;
+}
+
+message StringArray {
+  repeated string values = 1;
 }
