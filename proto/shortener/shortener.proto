@@ -9,14 +9,14 @@ service Shortener {
   rpc Unshorten (UrlUnshortenRequest) returns (UrlUnshortenResponse);
 }
 
-message UrlShortenResponse {
-  string url = 1;
-  uint64 userId = 2;
-}
-
 message UrlShortenRequest {
   string title = 1;
   string url = 2;
+  uint64 userId = 3;
+}
+
+message UrlShortenResponse {
+  string url = 1;
 }
 
 message UrlUnshortenRequest {
